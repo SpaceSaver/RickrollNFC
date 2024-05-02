@@ -3,7 +3,13 @@
     <head>
         <title>Not a title</title>
         <script>
-            
+            if (navigator.userAgent.includes("iPhone")) {
+                window.location.href = "vnd.youtube://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            } else if (navigator.userAgent.includes("Android")) {
+                window.location.href = "intent://www.youtube.com/watch?v=dQw4w9WgXcQ#Intent;package=com.google.android.youtube;scheme=https;end";
+            } else {
+                window.location.href = "https://youtu.be/dQw4w9WgXcQ"
+            }
         </script>
     </head>
 </html>
